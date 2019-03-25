@@ -1,0 +1,53 @@
+\documentclass[output=book,nonflat,modfonts,
+  colorlinks,citecolor=brown,
+%   showindex,
+  draftmode,
+  oldstylenumbers,
+  arseneau,
+]{langsci/langscibook}    
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%          additional packages                 %%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localhyphenation.tex}
+\bibliography{localbibliography} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%             Frontmatter                      %%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\begin{document}     
+\input{localcommands.tex} 
+
+\maketitle                
+\frontmatter
+\currentpdfbookmark{Contents}{name} % adds a PDF bookmark
+\include{indexed/dedication}
+\tableofcontents
+\include{indexed/preface}
+\include{indexed/acknowledgments}
+\include{indexed/abbreviations} 
+\mainmatter         
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%             Chapters                         %%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{indexed/01}  
+\include{indexed/02}  
+\include{indexed/03}  
+\include{indexed/04}  
+\include{indexed/05}  
+\include{indexed/06}  
+\include{indexed/07}   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%             Backmatter                       %%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\include{indexed/appendix} 
+\sloppy
+\input{localseealso.tex}  
+\input{backmatter.tex} 
+\end{document}

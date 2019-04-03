@@ -42,19 +42,19 @@ if __name__  ==  "__main__":
                     if lg  ==  '':
                         continue 
                     #substitute "lg" with "\ili{lg}"
-                    line  =  re.sub('(?<!ili{)%s(?![\w}])'%lg, r'\ili{%s}'%lg, line)
+                    line  =  re.sub('(?<!ili{)%s(?![\w}])'%lg, '\ili{%s}'%lg, line)
                 for term in terms:
                     term  =  term.strip() 
                     if term  ==  '':
                         continue
                     #substitute "term" with "\isi{term}"
-                    line  =  re.sub('(?<!isi{|...[A-Za-z])%s(?![-_\w}])'%term, r'\isi{%s}'%term, line) 
+                    line  =  re.sub('(?<!isi{|...[A-Za-z])%s(?![-_\w}])'%term, '\isi{%s}'%term, line) 
             newlines.append(line)
         #reassemble body
         content  =  "\n".join(newlines)  
         #compute stats
-        numberoflanguages  =  len(re.findall(r'\\ili{',content))
-        numberofterms  =  len(re.findall(r'\\isi{',content))
+        numberoflanguages  =  len(re.findall('\\ili{',content))
+        numberofterms  =  len(re.findall('\\isi{',content))
         #make sure directory indexed/ exists
         try: 
             os.mkdir('./indexed')

@@ -1,7 +1,7 @@
 \documentclass[output=book,nonflat,modfonts,
   colorlinks,citecolor=brown,
 %   showindex,
-  draftmode,
+  draftmode,draft,
   oldstylenumbers,
   arseneau,
 ]{langsci/langscibook}    
@@ -23,30 +23,30 @@
 \maketitle                
 \frontmatter
 \currentpdfbookmark{Contents}{name} % adds a PDF bookmark
-\include{indexed/dedication}
+\include{chapters/dedication}
 \tableofcontents
-\include{indexed/preface}
-\include{indexed/acknowledgments}
-\include{indexed/abbreviations} 
+\include{chapters/preface}
+\include{chapters/acknowledgments}
+\include{chapters/abbreviations} 
 \mainmatter         
   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Chapters                         %%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{indexed/01}  
-\include{indexed/02}  
-\include{indexed/03}  
-\include{indexed/04}  
-\include{indexed/05}  
-\include{indexed/06}  
-\include{indexed/07}   
+\include{chapters/01}  
+\include{chapters/02}  
+\include{chapters/03}  
+\include{chapters/04}  
+\include{chapters/05}  
+\include{chapters/06}  
+\include{chapters/07}   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%             Backmatter                       %%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
-\include{indexed/appendix} 
+\include{chapters/appendix} 
 \sloppy
 \input{localseealso.tex}  
 \input{backmatter.tex} 
